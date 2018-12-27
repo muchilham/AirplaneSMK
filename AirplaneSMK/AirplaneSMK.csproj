@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8652CC39-9143-4A98-B0FD-4F8F3C2A7C20}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AirplaneSMK</RootNamespace>
+    <AssemblyName>AirplaneSMK</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AirplaneDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AirplaneDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataBookingDetailFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataBookingDetailFrm.Designer.cs">
+      <DependentUpon>DataBookingDetailFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataFlightBookingFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataFlightBookingFrm.Designer.cs">
+      <DependentUpon>DataFlightBookingFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataLookUpBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataLookUpBooking.Designer.cs">
+      <DependentUpon>DataLookUpBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSchedulingFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataSchedulingFrm.Designer.cs">
+      <DependentUpon>DataSchedulingFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataManageRouteFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataManageRouteFrm.Designer.cs">
+      <DependentUpon>DataManageRouteFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataLookup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataLookup.Designer.cs">
+      <DependentUpon>DataLookup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataPlaceFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataPlaceFrm.Designer.cs">
+      <DependentUpon>DataPlaceFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataConsumptionFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataConsumptionFrm.Designer.cs">
+      <DependentUpon>DataConsumptionFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataClassFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataClassFrm.Designer.cs">
+      <DependentUpon>DataClassFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataCustomerFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataCustomerFrm.Designer.cs">
+      <DependentUpon>DataCustomerFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAirplaneFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataAirplaneFrm.Designer.cs">
+      <DependentUpon>DataAirplaneFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSchedulingDetailFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataSchedulingDetailFrm.Designer.cs">
+      <DependentUpon>DataSchedulingDetailFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="session.cs" />
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl2.Designer.cs">
+      <DependentUpon>UserControl2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="validasi.cs" />
+    <EmbeddedResource Include="DataBookingDetailFrm.resx">
+      <DependentUpon>DataBookingDetailFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataLookUpBooking.resx">
+      <DependentUpon>DataLookUpBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataSchedulingDetailFrm.resx">
+      <DependentUpon>DataSchedulingDetailFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl2.resx">
+      <DependentUpon>UserControl2.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AirplaneDB.dbml.layout">
+      <DependentUpon>AirplaneDB.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="DataFlightBookingFrm.resx">
+      <DependentUpon>DataFlightBookingFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataSchedulingFrm.resx">
+      <DependentUpon>DataSchedulingFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataManageRouteFrm.resx">
+      <DependentUpon>DataManageRouteFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataLookup.resx">
+      <DependentUpon>DataLookup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataPlaceFrm.resx">
+      <DependentUpon>DataPlaceFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataConsumptionFrm.resx">
+      <DependentUpon>DataConsumptionFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataClassFrm.resx">
+      <DependentUpon>DataClassFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataCustomerFrm.resx">
+      <DependentUpon>DataCustomerFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataAirplaneFrm.resx">
+      <DependentUpon>DataAirplaneFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="AirplaneDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>AirplaneDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

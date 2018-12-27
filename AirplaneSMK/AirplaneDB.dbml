@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AriplaneDB" Class="AirplaneDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-D9NU0BV\SQLExpress;Initial Catalog=AriplaneDB;Integrated Security=True" SettingsObjectName="AirplaneSMK.Properties.Settings" SettingsPropertyName="AriplaneDBConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tbl_BookingDetail" Member="tbl_BookingDetails">
+    <Type Name="tbl_BookingDetail">
+      <Column Name="id_booking" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_customer" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="no_seat" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="id_consumption" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_BookingMaster_tbl_BookingDetail" Member="tbl_BookingMaster" ThisKey="id_booking" OtherKey="id_booking" Type="tbl_BookingMaster" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="tbl_Consumption_tbl_BookingDetail" Member="tbl_Consumption" ThisKey="id_consumption" OtherKey="id_consumption" Type="tbl_Consumption" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="tbl_Customer_tbl_BookingDetail" Member="tbl_Customer" ThisKey="id_customer" OtherKey="id_customer" Type="tbl_Customer" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_ScheduleDetail" Member="tbl_ScheduleDetails">
+    <Type Name="tbl_ScheduleDetail">
+      <Column Name="id_schedule" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_route" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="tbl_Route_tbl_ScheduleDetail" Member="tbl_Route" ThisKey="id_route" OtherKey="id_route" Type="tbl_Route" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="tbl_Schedule_tbl_ScheduleDetail" Member="tbl_Schedule" ThisKey="id_schedule" OtherKey="id_schedule" Type="tbl_Schedule" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_BookingMaster" Member="tbl_BookingMasters">
+    <Type Name="tbl_BookingMaster">
+      <Column Name="id_booking" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="date_booking" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="id_schedule" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="total_price" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_BookingMaster_tbl_BookingDetail" Member="tbl_BookingDetails" ThisKey="id_booking" OtherKey="id_booking" Type="tbl_BookingDetail" />
+      <Association Name="tbl_Schedule_tbl_BookingMaster" Member="tbl_Schedule" ThisKey="id_schedule" OtherKey="id_schedule" Type="tbl_Schedule" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Class" Member="tbl_Classes">
+    <Type Name="tbl_Class">
+      <Column Name="id_class" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name_class" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="price_class" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_Class_tbl_Plane" Member="tbl_Planes" ThisKey="id_class" OtherKey="id_class" Type="tbl_Plane" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Consumption" Member="tbl_Consumptions">
+    <Type Name="tbl_Consumption">
+      <Column Name="id_consumption" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name_consumption" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="price_consumption" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_Consumption_tbl_BookingDetail" Member="tbl_BookingDetails" ThisKey="id_consumption" OtherKey="id_consumption" Type="tbl_BookingDetail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Customer" Member="tbl_Customers">
+    <Type Name="tbl_Customer">
+      <Column Name="id_customer" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name_customer" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="address_customer" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="email_customer" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="phonenumber_customer" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_Customer_tbl_BookingDetail" Member="tbl_BookingDetails" ThisKey="id_customer" OtherKey="id_customer" Type="tbl_BookingDetail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Place" Member="tbl_Places">
+    <Type Name="tbl_Place">
+      <Column Name="id_place" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name_place" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_Place_tbl_Route" Member="tbl_Routes" ThisKey="id_place" OtherKey="departure_place" Type="tbl_Route" />
+      <Association Name="tbl_Place_tbl_Route1" Member="tbl_Routes1" ThisKey="id_place" OtherKey="arrival_place" Type="tbl_Route" />
+      <Association Name="tbl_Place_tbl_Schedule" Member="tbl_Schedules" ThisKey="id_place" OtherKey="departure_origin" Type="tbl_Schedule" />
+      <Association Name="tbl_Place_tbl_Schedule1" Member="tbl_Schedules1" ThisKey="id_place" OtherKey="arrival_origin" Type="tbl_Schedule" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Plane" Member="tbl_Planes">
+    <Type Name="tbl_Plane">
+      <Column Name="id_plane" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name_plane" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="seat_plane" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_class" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="price_plane" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_Plane_tbl_Schedule" Member="tbl_Schedules" ThisKey="id_plane" OtherKey="id_plane" Type="tbl_Schedule" />
+      <Association Name="tbl_Class_tbl_Plane" Member="tbl_Class" ThisKey="id_class" OtherKey="id_class" Type="tbl_Class" IsForeignKey="true" DeleteRule="SET NULL" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Route" Member="tbl_Routes">
+    <Type Name="tbl_Route">
+      <Column Name="id_route" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="departure_place" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="arrival_place" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_Route_tbl_ScheduleDetail" Member="tbl_ScheduleDetails" ThisKey="id_route" OtherKey="id_route" Type="tbl_ScheduleDetail" />
+      <Association Name="tbl_Place_tbl_Route" Member="tbl_Place" ThisKey="departure_place" OtherKey="id_place" Type="tbl_Place" IsForeignKey="true" />
+      <Association Name="tbl_Place_tbl_Route1" Member="tbl_Place1" ThisKey="arrival_place" OtherKey="id_place" Type="tbl_Place" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Schedule" Member="tbl_Schedules">
+    <Type Name="tbl_Schedule">
+      <Column Name="id_schedule" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="price" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="total_seat" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="arrival_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="id_plane" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="departure_origin" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="arrival_origin" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_Schedule_tbl_ScheduleDetail" Member="tbl_ScheduleDetails" ThisKey="id_schedule" OtherKey="id_schedule" Type="tbl_ScheduleDetail" />
+      <Association Name="tbl_Schedule_tbl_BookingMaster" Member="tbl_BookingMasters" ThisKey="id_schedule" OtherKey="id_schedule" Type="tbl_BookingMaster" />
+      <Association Name="tbl_Place_tbl_Schedule" Member="tbl_Place" ThisKey="departure_origin" OtherKey="id_place" Type="tbl_Place" IsForeignKey="true" />
+      <Association Name="tbl_Place_tbl_Schedule1" Member="tbl_Place1" ThisKey="arrival_origin" OtherKey="id_place" Type="tbl_Place" IsForeignKey="true" />
+      <Association Name="tbl_Plane_tbl_Schedule" Member="tbl_Plane" ThisKey="id_plane" OtherKey="id_plane" Type="tbl_Plane" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+</Database>

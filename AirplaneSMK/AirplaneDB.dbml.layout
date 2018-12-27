@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.25, 12.25" name="AirplaneDB">
+  <DataContextMoniker Name="/AirplaneDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="ecbb5833-25c8-426b-94ee-7c68385eb18f" absoluteBounds="9, 7.125, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/AirplaneDBDataContext/tbl_BookingDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="75620ac5-da16-4e9b-9f3a-a78b432a92a5" absoluteBounds="9.015, 7.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2fad66a0-f6d0-41d6-85ae-e3023cc64ee4" absoluteBounds="6.25, 4.375, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/AirplaneDBDataContext/tbl_ScheduleDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="078dc0e1-ca48-4913-9110-9284f6130e4a" absoluteBounds="6.265, 4.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="41342f6f-1164-4e7c-808c-d5915574ccd5" absoluteBounds="6.25, 7.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/AirplaneDBDataContext/tbl_BookingMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a5d52ba4-8d43-4db3-ada8-45b3313c7e2e" absoluteBounds="6.265, 7.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f29349d0-43dc-457d-b73b-1b2e263d8d6e" absoluteBounds="1.5, 9.625, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/AirplaneDBDataContext/tbl_Class" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e31f5cac-801e-4e52-8421-c481c36ad28d" absoluteBounds="1.5150000000000001, 10.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="793975a9-d156-4272-921d-426554096a02" absoluteBounds="6.25, 2.125, 2, 1.3862939453124996">
+      <DataClassMoniker Name="/AirplaneDBDataContext/tbl_Consumption" />
+      <nestedChildShapes>
+        <elementListCompartment Id="606ea9b6-f3fe-404e-b58f-6c24372f32f5" absoluteBounds="6.265, 2.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="14cd5096-2c81-427a-840f-5b148378fcac" absoluteBounds="6.25, 10.25, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/AirplaneDBDataContext/tbl_Customer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8ca089b4-1e53-4825-9460-3e7753c70b86" absoluteBounds="6.265, 10.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b45338ce-f5f8-4b28-88e7-0e418554ae67" absoluteBounds="0.75, 4.375, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/AirplaneDBDataContext/tbl_Place" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c6880785-3647-42d7-b2a7-ed4dd6f98022" absoluteBounds="0.765, 4.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9f7ffe4c-62df-46ae-a66f-506e4a0ac100" absoluteBounds="0.75, 6.5, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/AirplaneDBDataContext/tbl_Plane" />
+      <nestedChildShapes>
+        <elementListCompartment Id="98b016f3-743e-475d-ae6b-6e28ee27a393" absoluteBounds="0.765, 6.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5e7d6493-f687-413c-bd13-82a431b6b104" absoluteBounds="3.5, 4.25, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/AirplaneDBDataContext/tbl_Route" />
+      <nestedChildShapes>
+        <elementListCompartment Id="19304a02-821e-494f-b5ed-6cacf16678fd" absoluteBounds="3.515, 4.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="50f2b327-9c08-4f09-a74c-a2a41acba50e" absoluteBounds="3.5, 0.75, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/AirplaneDBDataContext/tbl_Schedule" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7e781ab0-aedf-4810-a094-6f2d7c5aa96d" absoluteBounds="3.515, 1.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.25 : 8.03929768880208); (9 : 8.03929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AirplaneDBDataContext/tbl_BookingMaster/tbl_BookingMaster_tbl_BookingDetail" />
+      <nodes>
+        <classShapeMoniker Id="41342f6f-1164-4e7c-808c-d5915574ccd5" />
+        <classShapeMoniker Id="ecbb5833-25c8-426b-94ee-7c68385eb18f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 2.81814697265625); (10 : 2.81814697265625); (10 : 7.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AirplaneDBDataContext/tbl_Consumption/tbl_Consumption_tbl_BookingDetail" />
+      <nodes>
+        <classShapeMoniker Id="793975a9-d156-4272-921d-426554096a02" />
+        <classShapeMoniker Id="ecbb5833-25c8-426b-94ee-7c68385eb18f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 11.1354484049479); (10 : 11.1354484049479); (10 : 8.89589680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AirplaneDBDataContext/tbl_Customer/tbl_Customer_tbl_BookingDetail" />
+      <nodes>
+        <classShapeMoniker Id="14cd5096-2c81-427a-840f-5b148378fcac" />
+        <classShapeMoniker Id="ecbb5833-25c8-426b-94ee-7c68385eb18f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.125 : 9.625); (2.125 : 8.27089680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AirplaneDBDataContext/tbl_Class/tbl_Class_tbl_Plane" />
+      <nodes>
+        <classShapeMoniker Id="f29349d0-43dc-457d-b73b-1b2e263d8d6e" />
+        <classShapeMoniker Id="9f7ffe4c-62df-46ae-a66f-506e4a0ac100" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 4.97199625651042); (5.79166666666667 : 4.97199625651042 : JumpStart); (5.95833333333333 : 4.97199625651042 : JumpEnd); (6.25 : 4.97199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AirplaneDBDataContext/tbl_Route/tbl_Route_tbl_ScheduleDetail" />
+      <nodes>
+        <classShapeMoniker Id="5e7d6493-f687-413c-bd13-82a431b6b104" />
+        <classShapeMoniker Id="2fad66a0-f6d0-41d6-85ae-e3023cc64ee4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.97199625651042); (3.04166666666667 : 4.97199625651042 : JumpStart); (3.20833333333333 : 4.97199625651042 : JumpEnd); (3.5 : 4.97199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AirplaneDBDataContext/tbl_Place/tbl_Place_tbl_Route" />
+      <nodes>
+        <classShapeMoniker Id="b45338ce-f5f8-4b28-88e7-0e418554ae67" />
+        <classShapeMoniker Id="5e7d6493-f687-413c-bd13-82a431b6b104" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.61099812825521); (3.04166666666667 : 4.61099812825521 : JumpStart); (3.20833333333333 : 4.61099812825521 : JumpEnd); (3.5 : 4.61099812825521)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AirplaneDBDataContext/tbl_Place/tbl_Place_tbl_Route1" />
+      <nodes>
+        <classShapeMoniker Id="b45338ce-f5f8-4b28-88e7-0e418554ae67" />
+        <classShapeMoniker Id="5e7d6493-f687-413c-bd13-82a431b6b104" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 3.00087702984776); (6.0625 : 3.56337702984776); (6.0625 : 4.64224612825521); (6.25 : 4.64224612825521)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AirplaneDBDataContext/tbl_Schedule/tbl_Schedule_tbl_ScheduleDetail" />
+      <nodes>
+        <classShapeMoniker Id="50f2b327-9c08-4f09-a74c-a2a41acba50e" />
+        <classShapeMoniker Id="2fad66a0-f6d0-41d6-85ae-e3023cc64ee4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.46769230769231 : 3.09780110677083); (5.875 : 3.50510879907853); (5.875 : 8.03929768880208); (6.25 : 8.03929768880208)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AirplaneDBDataContext/tbl_Schedule/tbl_Schedule_tbl_BookingMaster" />
+      <nodes>
+        <classShapeMoniker Id="50f2b327-9c08-4f09-a74c-a2a41acba50e" />
+        <classShapeMoniker Id="41342f6f-1164-4e7c-808c-d5915574ccd5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 4.375); (1.75 : 1.92390055338542); (3.04166666666667 : 1.92390055338542 : JumpStart); (3.20833333333333 : 1.92390055338542 : JumpEnd); (3.5 : 1.92390055338542)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AirplaneDBDataContext/tbl_Place/tbl_Place_tbl_Schedule" />
+      <nodes>
+        <classShapeMoniker Id="b45338ce-f5f8-4b28-88e7-0e418554ae67" />
+        <classShapeMoniker Id="50f2b327-9c08-4f09-a74c-a2a41acba50e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.2812525 : 4.375); (2.2812525 : 2.54210333007812); (3.04166666666667 : 2.54210333007812 : JumpStart); (3.20833333333333 : 2.54210333007812 : JumpEnd); (3.5 : 2.54210333007812)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AirplaneDBDataContext/tbl_Place/tbl_Place_tbl_Schedule1" />
+      <nodes>
+        <classShapeMoniker Id="b45338ce-f5f8-4b28-88e7-0e418554ae67" />
+        <classShapeMoniker Id="50f2b327-9c08-4f09-a74c-a2a41acba50e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.5); (3.125 : 6.125); (3.125 : 1.30569827669271); (3.5 : 1.30569827669271)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AirplaneDBDataContext/tbl_Plane/tbl_Plane_tbl_Schedule" />
+      <nodes>
+        <classShapeMoniker Id="9f7ffe4c-62df-46ae-a66f-506e4a0ac100" />
+        <classShapeMoniker Id="50f2b327-9c08-4f09-a74c-a2a41acba50e" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
